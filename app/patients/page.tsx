@@ -11,7 +11,7 @@ export default function Patients(){
     }
 
     const [patients, setPatients] = useState<patientdata[]>(patientData)
-
+    
 
     
 
