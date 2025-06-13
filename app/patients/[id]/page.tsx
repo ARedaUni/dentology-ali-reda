@@ -4,29 +4,9 @@ import PatientsData from "@/lib/data/patients.json"
 import AppointmentsData from "@/lib/data/appointments.json"
 import { useEffect, useState } from "react";
 import { appointments, patients } from "@/lib/types";
-
-
-// export default async function IndividualPatient({
-//     params,
-//   }: {
-//     params: Promise<{ slug: string }>
-//   }){
-
-//     const { slug } = await params
-    
-
-
-//     return (
-// <div></div>
-//     )
-
-
-// }
-
-
 import { use } from 'react'
 import { Patientlist } from "@/components/patients/patientlist";
- 
+import { convertFromISOToReadable } from "@/lib/utils";
 type Params = Promise<{ id: string }>
  
 export default function Page(props: {
@@ -43,6 +23,7 @@ export default function Page(props: {
     }))
   }, [])
 
+
   const [appointments, setAppointments] = useState<appointments[]>(AppointmentsData);
   const [patient, setPatient] = useState<patients[]>(PatientsData);
 
@@ -56,7 +37,7 @@ export default function Page(props: {
             <div>
         Appointment type: {appointments[0].type}
         Appointment status: {appointments[0].status}
-        Appointment date: {appointments[0].date_and_time}
+        Appointment date: {appointments[0].date_and_time.replace('T', ' ')}
         </div>
         : <div></div>
         
