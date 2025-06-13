@@ -1,5 +1,5 @@
-import { patients } from "@/lib/types";
-import { SetStateAction, useState
+
+import { useState
  } from "react";
 
 
@@ -16,13 +16,13 @@ import { SetStateAction, useState
     )
 
     //single one with neat trick to not repeat handle function for each input 
-    const handleInputs = (e) => {
+    const handleInputs = (e: any) => {
         setNewPatient({...newPatient, 
             [e.target.name]: e.target.value
         })
     }
 
-    const addPatient = (e) => {
+    const addPatient = (e: any) => {
         if(newPatient.name === '' || newPatient.date_of_birth === '') return;
         setPatients([...patients, newPatient])
         setIsOpen(false)
@@ -30,7 +30,9 @@ import { SetStateAction, useState
 
     return(
         <div className="flex justify-center">
+            
             <div className="flex flex-col space-y-2  max-w-96 max-h-96">
+            <button className="ml-32" onClick={() => setIsOpen(false)}>X</button>
                 <label htmlFor="name">Name: </label>
                 <input className="border border-green-200" onChange={handleInputs} name="name"/>
                 <label htmlFor="name">Date of birth: </label><span className="text-xs italic">format: YYYY-MM-DD</span>

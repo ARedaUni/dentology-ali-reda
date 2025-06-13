@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect, ChangeEvent} from 'react'
+import {useState} from 'react'
 import patientData from '@/lib/data/patients.json'
 import { Patientlist } from '@/components/patients/patientlist'
 import { Input } from '@/components/ui/input'

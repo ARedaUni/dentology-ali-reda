@@ -37,9 +37,11 @@ export default function Page(props: {
 
   return(
     <div>
+        <h2 className="text-3xl">Patient:</h2>
     <Patientlist patient={patient[0]} />
 
-    <div className="">
+    <div className="flex flex-col">
+        <h2 className="text-3xl">Appointments:</h2>
         {appointments.length > 0 ? appointments.map(appointment => {
             return (<Appointmentslist key={appointment.id} appointment={appointment} />)
         })
