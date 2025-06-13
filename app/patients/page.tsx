@@ -1,31 +1,44 @@
 'use client'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, ChangeEvent} from 'react'
 import patientData from '@/lib/data/patients.json'
 import { Patientlist } from '@/components/patients/patientlist'
+import { Input } from '@/components/ui/input'
+import { patients } from '@/lib/types'
+import { Button } from '@/components/ui/button'
+import { Addpatient } from '@/components/patients/addpatient'
 
 export default function Patients(){
-    type patientdata = {
-        id: string,
-        name: string,
-        date_of_birth: string
-    }
+   
 
-    const [patients, setPatients] = useState<patientdata[]>(patientData)
+    const [patients, setPatients] = useState<patients[]>(patientData)
+    const [isOpen, setIsOpen] = useState(false);
 
    
+
+
+ 
     
 
     return (
         <div className='min-h-screen '>
-      
+         {isOpen ? <Addpatient setIsOpen={setIsOpen} patients={patients} setPatients={setPatients} /> :
             <div className='flex flex-col'>
-            <h1 className='text-3xl ml-3'>Patients</h1>
+                <div className='flex justify-between mx-3 my-3'>
+            <h1 className='text-3xl '>Patients</h1>
+            <div className='flex'>
+            <Button onClick={() => {setIsOpen(true)}}>Add Patient</Button>
+            <Input  className='max-w-72'/>
+            </div>
+            </div>
+
             {patients && patients.map(patient => {
                 return (
                     <Patientlist key={patient.id} patient={patient} />
                 )
             })}
             </div>
+}
+
           
         </div>
     )
