@@ -7,6 +7,7 @@ import { appointments, patients } from "@/lib/types";
 import { use } from 'react'
 import { Patientlist } from "@/components/patients/patientlist";
 import { convertFromISOToReadable } from "@/lib/utils";
+import { Appointmentslist } from "@/components/appointments/appointmentlist";
 type Params = Promise<{ id: string }>
  
 export default function Page(props: {
@@ -33,13 +34,10 @@ export default function Page(props: {
     <Patientlist patient={patient[0]} />
 
     <div className="">
-        {appointments.length === 1 ? 
-            <div>
-        Appointment type: {appointments[0].type}
-        Appointment status: {appointments[0].status}
-        Appointment date: {appointments[0].date_and_time.replace('T', ' ')}
-        </div>
-        : <div></div>
+        {appointments.length > 0 ? appointments.map(appointment => {
+            return (<Appointmentslist key={appointment.id} appointment={appointment} />)
+        })
+        : <div>Patient has made no appointments</div>
         
         }
     </div>

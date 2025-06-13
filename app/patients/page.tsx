@@ -11,17 +11,22 @@ export default function Patients(){
     }
 
     const [patients, setPatients] = useState<patientdata[]>(patientData)
-    
 
+   
     
 
     return (
-        <div className=''>
+        <div className='min-h-screen '>
+      
+            <div className='flex flex-col '>
+            <h1>Patients</h1>
             {patients && patients.map(patient => {
                 return (
                     <Patientlist key={patient.id} patient={patient} />
                 )
             })}
+            </div>
+          
         </div>
     )
 
