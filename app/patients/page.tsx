@@ -13,12 +13,6 @@ export default function Patients(){
     const [patients, setPatients] = useState<patients[]>(patientData)
     const [isOpen, setIsOpen] = useState(false);
 
-   
-
-
- 
-    
-
     return (
         <div className='min-h-screen '>
          {isOpen ? <Addpatient setIsOpen={setIsOpen} patients={patients} setPatients={setPatients} /> :
@@ -27,7 +21,7 @@ export default function Patients(){
             <h1 className='text-3xl '>Patients</h1>
             <div className='flex'>
             <Button onClick={() => {setIsOpen(true)}}>Add Patient</Button>
-            <Input  className='max-w-72'/>
+           
             </div>
             </div>
 
