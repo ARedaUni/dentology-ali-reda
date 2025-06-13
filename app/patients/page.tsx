@@ -12,6 +12,7 @@ export default function Patients(){
 
     const [patients, setPatients] = useState<patients[]>(patientData)
     const [isOpen, setIsOpen] = useState(false);
+    
 
     return (
         <div className='min-h-screen '>
@@ -27,7 +28,7 @@ export default function Patients(){
 
             {patients && patients.map(patient => {
                 return (
-                    <Patientlist key={patient.id} patient={patient} />
+                    <Patientlist setPatient={setPatients} key={patient.id} patient={patient} />
                 )
             })}
             </div>
