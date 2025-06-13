@@ -18,8 +18,8 @@ export default function Patients(){
     return (
         <div className='min-h-screen '>
       
-            <div className='flex flex-col '>
-            <h1>Patients</h1>
+            <div className='flex flex-col'>
+            <h1 className='text-3xl ml-3'>Patients</h1>
             {patients && patients.map(patient => {
                 return (
                     <Patientlist key={patient.id} patient={patient} />
