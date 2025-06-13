@@ -1,0 +1,100 @@
+[
+  {
+    "id": "101",
+    "type": "Consultation",
+    "status": "Scheduled",
+    "date_and_time": "2023-11-01",
+    "patientid": "1"
+  },
+  {
+    "id": "102",
+    "type": "Check-up",
+    "status": "Attended",
+    "date_and_time": "2023-10-15",
+    "patientid": "2"
+  },
+  {
+    "id": "103",
+    "type": "Consultation",
+    "status": "Scheduled",
+    "date_and_time": "2023-12-05",
+    "patientid": "3"
+  },
+  {
+    "id": "104",
+    "type": "Check-up",
+    "status": "Cancelled",
+    "date_and_time": "2023-11-20",
+    "patientid": "4"
+  },
+  {
+    "id": "105",
+    "type": "Consultation",
+    "status": "Attended",
+    "date_and_time": "2023-11-10",
+    "patientid": "1"
+  },
+  {
+    "id": "106",
+    "type": "Check-up",
+    "status": "Scheduled",
+    "date_and_time": "2023-12-15",
+    "patientid": "2"
+  },
+  {
+    "id": "107",
+    "type": "Consultation",
+    "status": "Cancelled",
+    "date_and_time": "2023-11-25",
+    "patientid": "3"
+  },
+  {
+    "id": "108",
+    "type": "Check-up",
+    "status": "Attended",
+    "date_and_time": "2023-10-30",
+    "patientid": "4"
+  },
+  {
+    "id": "109",
+    "type": "Consultation",
+    "status": "Scheduled",
+    "date_and_time": "2023-12-01",
+    "patientid": "7"
+  },
+  {
+    "id": "110",
+    "type": "Check-up",
+    "status": "Attended",
+    "date_and_time": "2023-11-15",
+    "patientid": "8"
+  },
+  {
+    "id": "111",
+    "type": "Consultation",
+    "status": "Cancelled",
+    "date_and_time": "2023-12-10",
+    "patientid": "9"
+  },
+  {
+    "id": "112",
+    "type": "Check-up",
+    "status": "Scheduled",
+    "date_and_time": "2023-12-20",
+    "patientid": "10"
+  },
+  {
+    "id": "113",
+    "type": "Consultation",
+    "status": "Attended",
+    "date_and_time": "2023-11-05",
+    "patientid": "11"
+  },
+  {
+    "id": "114",
+    "type": "Check-up",
+    "status": "Cancelled",
+    "date_and_time": "2023-11-25",
+    "patientid": "12"
+  }
+]
